@@ -49,7 +49,7 @@ const Order: FC<ComponentProps> = ({ id }) => {
       },
       {
         key: 'store-allocated',
-        label: 'Store Allocated',
+        label: 'Allocated',
       },
       {
         key: 'store-approved',
@@ -57,7 +57,7 @@ const Order: FC<ComponentProps> = ({ id }) => {
       },
       {
         key: 'payment',
-        label: 'Payment Confirmation',
+        label: 'Payment ',
       },
       {
         key: 'ship',
@@ -66,9 +66,6 @@ const Order: FC<ComponentProps> = ({ id }) => {
       {
         key: 'Manifest',
         label: 'Manifest',
-      }, {
-        key: 'completed',
-        label: 'Completed',
       }
     ],
     []
@@ -248,7 +245,7 @@ const Order: FC<ComponentProps> = ({ id }) => {
             </Grid.Item>
           </Grid>
 
-          <Steps steps={createStepsDefinition} activeStepKey={'InTransit'} />
+          <Steps steps={createStepsDefinition} activeStepKey={'store-approved'} />
           <Grid
             gridGap="16px"
             gridAutoColumns="1fr"
