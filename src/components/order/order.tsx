@@ -44,29 +44,32 @@ const Order: FC<ComponentProps> = ({ id }) => {
   const createStepsDefinition = useMemo(
     () => [
       {
-        key: 'Ordered',
+        key: 'Open',
         label: 'Ordered',
       },
       {
-        key: 'Picking',
-        label: 'Picking',
+        key: 'store-allocated',
+        label: 'Store Allocated',
       },
       {
-        key: 'Picked',
-        label: 'Picked',
+        key: 'store-approved',
+        label: 'Store Processing',
       },
       {
-        key: 'ReadyToShip',
-        label: 'Ready To Ship',
+        key: 'payment',
+        label: 'Payment Confirmation',
       },
       {
-        key: 'InTransit',
-        label: 'In Transit',
+        key: 'ship',
+        label: 'Ship',
       },
       {
-        key: 'Delivered',
-        label: 'Delivered',
-      },
+        key: 'Manifest',
+        label: 'Manifest',
+      }, {
+        key: 'completed',
+        label: 'Completed',
+      }
     ],
     []
   );
@@ -151,10 +154,10 @@ const Order: FC<ComponentProps> = ({ id }) => {
 
   return (
     <InfoMainPage
-      title="Order Tracking Form"
+      title="Order Management & Tracking Form"
       customTitleRow={
         <Spacings.Inline justifyContent="space-between">
-          <Text.Headline as="h2">Order Tracking Form</Text.Headline>
+          <Text.Headline as="h2">Order Management & Tracking Form</Text.Headline>
           <Spacings.Inline justifyContent="space-between">
             <PrimaryButton iconLeft={<PlusBoldIcon />} label={'Open in OMS Lite'} />
             <SecondaryButton
